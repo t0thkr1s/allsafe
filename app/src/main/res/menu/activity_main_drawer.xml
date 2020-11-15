@@ -8,13 +8,27 @@
             android:id="@+id/nav_search"
             android:icon="@drawable/ic_search"
             android:title="Search" />
-        <item
-            android:id="@+id/nav_logging"
-            android:icon="@drawable/ic_logging"
-            android:title="Insecure Logging" />
-        <item
-            android:id="@+id/nav_about"
-            android:icon="@drawable/ic_about"
-            android:title="About" />
     </group>
+
+    <item android:title="Challenges">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_insecure_logging"
+                    android:icon="@drawable/ic_logging"
+                    android:title="Insecure Logging" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Information">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_about"
+                    android:icon="@drawable/ic_about"
+                    android:title="About" />
+            </group>
+        </menu>
+    </item>
 </menu>
