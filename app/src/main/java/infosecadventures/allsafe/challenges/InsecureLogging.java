@@ -23,7 +23,6 @@ public class InsecureLogging extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_insecure_logging, container, false);
-        requireActivity().setTitle("Insecure Logging");
         setHasOptionsMenu(true);
         TextInputEditText secret = view.findViewById(R.id.secret);
         secret.setOnEditorActionListener((v, actionId, event) -> {
