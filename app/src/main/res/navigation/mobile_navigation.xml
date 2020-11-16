@@ -12,6 +12,12 @@
         tools:layout="@layout/fragment_insecure_logging" />
 
     <fragment
+        android:id="@+id/nav_root_detection"
+        android:name="infosecadventures.allsafe.challenges.RootDetection"
+        android:label="Root Detection"
+        tools:layout="@layout/fragment_root_detection" />
+
+    <fragment
         android:id="@+id/nav_about"
         android:name="infosecadventures.allsafe.about.About"
         android:label="About"
