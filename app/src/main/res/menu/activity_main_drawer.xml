@@ -21,6 +21,10 @@
                     android:id="@+id/nav_root_detection"
                     android:icon="@drawable/ic_root_detection"
                     android:title="Root Detection" />
+                <item
+                    android:id="@+id/nav_certificate_pinning"
+                    android:icon="@drawable/ic_cert"
+                    android:title="Certificate Pinning" />
             </group>
         </menu>
     </item>
