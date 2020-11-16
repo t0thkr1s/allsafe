@@ -17,6 +17,10 @@
                     android:id="@+id/nav_insecure_logging"
                     android:icon="@drawable/ic_logging"
                     android:title="Insecure Logging" />
+                <item
+                    android:id="@+id/nav_root_detection"
+                    android:icon="@drawable/ic_root_detection"
+                    android:title="Root Detection" />
             </group>
         </menu>
     </item>
