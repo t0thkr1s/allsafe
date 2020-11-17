@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.scottyab.rootbeer.RootBeer
 import infosecadventures.allsafe.R
-import infosecadventures.allsafe.utils.DialogUtil
+import infosecadventures.allsafe.utils.SnackUtil
 
 class RootDetection : Fragment() {
 
@@ -15,9 +15,9 @@ class RootDetection : Fragment() {
         val view = inflater.inflate(R.layout.fragment_root_detection, container, false)
         view.findViewById<View>(R.id.check).setOnClickListener {
             if (RootBeer(context).isRooted) {
-                DialogUtil.simpleAlert(requireActivity(), "Access Denied", "It looks like your device is rooted!")
+                SnackUtil.simpleMessage(requireActivity(), "Sorry, your device is rooted!")
             } else {
-                DialogUtil.simpleAlert(requireActivity(), "Access Granted", "Good job!")
+                SnackUtil.simpleMessage(requireActivity(), "Congrats, root is not detected!")
             }
         }
         return view

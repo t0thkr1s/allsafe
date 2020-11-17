@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 import infosecadventures.allsafe.R;
-import infosecadventures.allsafe.utils.DialogUtil;
+import infosecadventures.allsafe.utils.SnackUtil;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.CertificatePinner;
@@ -51,7 +51,7 @@ public class CertificatePinning extends Fragment {
             okHttpClient.newCall(request).enqueue(new Callback() {
                 @Override
                 public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                    requireActivity().runOnUiThread(() -> DialogUtil.INSTANCE.simpleAlert(requireActivity(), "Certificate Unknown", "The client failed to negotiate a TLS connection!"));
+                    requireActivity().runOnUiThread(() -> SnackUtil.INSTANCE.simpleMessage(requireActivity(), "The client failed to negotiate a TLS connection!"));
                 }
 
                 @Override
@@ -59,7 +59,7 @@ public class CertificatePinning extends Fragment {
                     Log.d("ALLSAFE", Objects.requireNonNull(response.body()).string());
                     requireActivity().runOnUiThread(() -> {
                         if (response.isSuccessful()) {
-                            DialogUtil.INSTANCE.simpleAlert(requireActivity(), "Connection Successful", "Check your proxy!");
+                            SnackUtil.INSTANCE.simpleMessage(requireActivity(), "Successful connection, check your proxy!");
                         }
                     });
                 }
