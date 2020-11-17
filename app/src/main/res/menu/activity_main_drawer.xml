@@ -18,13 +18,29 @@
                     android:icon="@drawable/ic_logging"
                     android:title="Insecure Logging" />
                 <item
+                    android:id="@+id/nav_hardcoded_credentials"
+                    android:icon="@drawable/ic_creds"
+                    android:title="Hardcoded Credentials" />
+                <item
+                    android:id="@+id/nav_pin_bypass"
+                    android:icon="@drawable/ic_pin_bypass"
+                    android:title="PIN Bypass" />
+                <item
                     android:id="@+id/nav_root_detection"
                     android:icon="@drawable/ic_root_detection"
                     android:title="Root Detection" />
                 <item
+                    android:id="@+id/nav_vulnerable_web_view"
+                    android:icon="@drawable/ic_webview"
+                    android:title="Vulnerable WebView" />
+                <item
                     android:id="@+id/nav_certificate_pinning"
                     android:icon="@drawable/ic_cert"
                     android:title="Certificate Pinning" />
+                <item
+                    android:id="@+id/nav_native_library"
+                    android:icon="@drawable/ic_native_library"
+                    android:title="Native Library" />
             </group>
         </menu>
     </item>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_about">
+    app:startDestination="@+id/nav_insecure_logging">
 
     <fragment
         android:id="@+id/nav_insecure_logging"
@@ -12,16 +12,40 @@
         tools:layout="@layout/fragment_insecure_logging" />
 
     <fragment
+        android:id="@+id/nav_hardcoded_credentials"
+        android:name="infosecadventures.allsafe.challenges.HardcodedCredentials"
+        android:label="Hardcoded Credentials"
+        tools:layout="@layout/fragment_hardcoded_credentials" />
+
+    <fragment
+        android:id="@+id/nav_vulnerable_web_view"
+        android:name="infosecadventures.allsafe.challenges.VulnerableWebView"
+        android:label="Vulnerable WebView"
+        tools:layout="@layout/fragment_vulnerable_web_view" />
+
+    <fragment
         android:id="@+id/nav_certificate_pinning"
         android:name="infosecadventures.allsafe.challenges.CertificatePinning"
         android:label="Certificate Pinning"
         tools:layout="@layout/fragment_certificate_pinning" />
 
     <fragment
+        android:id="@+id/nav_pin_bypass"
+        android:name="infosecadventures.allsafe.challenges.PinBypass"
+        android:label="PIN Bypass"
+        tools:layout="@layout/fragment_pin_bypass" />
+
+    <fragment
         android:id="@+id/nav_root_detection"
         android:name="infosecadventures.allsafe.challenges.RootDetection"
         android:label="Root Detection"
         tools:layout="@layout/fragment_root_detection" />
+
+    <fragment
+        android:id="@+id/nav_native_library"
+        android:name="infosecadventures.allsafe.challenges.NativeLibrary"
+        android:label="Native Library"
+        tools:layout="@layout/fragment_native_library" />
 
     <fragment
         android:id="@+id/nav_about"

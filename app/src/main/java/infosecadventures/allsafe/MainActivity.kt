@@ -8,7 +8,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.navigation.NavigationView
-import infosecadventures.allsafe.utils.DialogUtil
+import infosecadventures.allsafe.utils.SnackUtil
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         mAppBarConfiguration = AppBarConfiguration.Builder(
-                R.id.nav_search, R.id.nav_insecure_logging, R.id.nav_certificate_pinning, R.id.nav_root_detection, R.id.nav_about)
+                R.id.nav_search, R.id.nav_insecure_logging, R.id.nav_hardcoded_credentials, R.id.nav_certificate_pinning, R.id.nav_pin_bypass, R.id.nav_root_detection, R.id.nav_vulnerable_web_view, R.id.nav_native_library, R.id.nav_about)
                 .setOpenableLayout(drawer)
                 .build()
         val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         when {
             mAppBarConfiguration?.openableLayout?.isOpen!! -> mAppBarConfiguration!!.openableLayout?.close()
             supportFragmentManager.backStackEntryCount > 1 -> supportFragmentManager.popBackStack()
-            else -> DialogUtil.confirmExit(this)
+            else -> SnackUtil.confirmExit(this)
         }
     }
 }
