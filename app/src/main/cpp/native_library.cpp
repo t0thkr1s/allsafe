@@ -44,7 +44,7 @@ jboolean checkPass(JNIEnv *env, jstring pass) {
 
 extern "C"
 JNIEXPORT jboolean JNICALL
-Java_com_infosecadventures_allsafe_challanges_NativeLibrary_checkPassword(JNIEnv *env,
-                                                                          jstring password) {
+Java_infosecadventures_allsafe_challenges_NativeLibrary_checkPassword(JNIEnv *env, jobject thiz,
+                                                                      jstring password) {
     return checkPass(env, password);
 }
