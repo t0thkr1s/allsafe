@@ -1,6 +1,7 @@
 package infosecadventures.allsafe
 
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
@@ -16,13 +17,17 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        window.setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+                WindowManager.LayoutParams.FLAG_SECURE)
+
         setContentView(R.layout.activity_main)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         mAppBarConfiguration = AppBarConfiguration.Builder(
-                R.id.nav_search, R.id.nav_insecure_logging, R.id.nav_hardcoded_credentials, R.id.nav_certificate_pinning, R.id.nav_pin_bypass, R.id.nav_root_detection, R.id.nav_vulnerable_web_view, R.id.nav_native_library, R.id.nav_about)
+                R.id.nav_search, R.id.nav_insecure_logging, R.id.nav_hardcoded_credentials, R.id.nav_weak_crypto, R.id.nav_certificate_pinning, R.id.nav_pin_bypass, R.id.nav_root_detection, R.id.nav_vulnerable_web_view, R.id.nav_native_library, R.id.nav_about)
                 .setOpenableLayout(drawer)
                 .build()
         val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
