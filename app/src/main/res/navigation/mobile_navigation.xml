@@ -42,6 +42,12 @@
         tools:layout="@layout/fragment_root_detection" />
 
     <fragment
+        android:id="@+id/nav_weak_crypto"
+        android:name="infosecadventures.allsafe.challenges.WeakCrypto"
+        android:label="Weak Crypto"
+        tools:layout="@layout/fragment_weak_crypto" />
+
+    <fragment
         android:id="@+id/nav_native_library"
         android:name="infosecadventures.allsafe.challenges.NativeLibrary"
         android:label="Native Library"

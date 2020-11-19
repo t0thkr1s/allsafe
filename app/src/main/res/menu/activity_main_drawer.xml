@@ -38,6 +38,10 @@
                     android:icon="@drawable/ic_cert"
                     android:title="Certificate Pinning" />
                 <item
+                    android:id="@+id/nav_weak_crypto"
+                    android:icon="@drawable/ic_encryption_key"
+                    android:title="Weak Crypto" />
+                <item
                     android:id="@+id/nav_native_library"
                     android:icon="@drawable/ic_native_library"
                     android:title="Native Library" />
