@@ -27,7 +27,7 @@
         </activity>
 
         <receiver
-            android:name=".SecretReceiver"
+            android:name=".challenges.SecretReceiver"
             android:exported="true" />
 
     </application>
