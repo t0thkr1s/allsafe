@@ -1,4 +1,4 @@
-package infosecadventures.allsafe;
+package infosecadventures.allsafe.challenges;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -19,10 +19,10 @@ public class SecretReceiver extends BroadcastReceiver {
             if (Arrays.equals(data, Base64.decode("YzEwZjAzNzM0YWZjYzhiOGZhMzk3YjJiODk1NGY2NzQ=", Base64.DEFAULT))) {
                 Toast.makeText(context, "Congratulations!", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(context, "Sorry, that's not the flag!", Toast.LENGTH_LONG).show();
+                Toast.makeText(context, "Try harder!", Toast.LENGTH_LONG).show();
             }
         } catch (IllegalArgumentException e) {
-            Log.d("ALLSAFE", "Exception. Looks characters, we can't decode!");
+            Log.d("ALLSAFE", "Looks like characters that we can't decode!");
         }
     }
 }
