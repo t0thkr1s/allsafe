@@ -2,14 +2,41 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/built-for-android.svg)](https://github.com/t0thkr1s/)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/t0thkr1s/)
-[![forthebadge](https://forthebadge.com/images/badges/not-a-bug-a-feature.svg)](https://github.com/t0thkr1s/)
 
-Allsafe is an intentionally vulnerable application that contains various vulnerabilities.
+Allsafe is an intentionally vulnerable application that contains various vulnerabilities. Additionally, there are some Frida based challenges for you to explore.
 
 ## Tasks / Vulnerabilities
 
-- [x] Root Detection Bypass
-- [x] Insecure Logging
+### 1. Insecure Logging
+
+Simple information disclosure vulnerability. Use the `logcat` command-line tool to discover sensitive information.
+
+###### Resources & HackerOne Reports:
+
+- [Logcat Tool](https://developer.android.com/studio/command-line/logcat)
+- [Coinbase OAuth Response Code Leak](https://hackerone.com/reports/5314)
+
+<details>
+<summary>Show me the solution!</summary>
+<br>
+# TODO
+<br><br>
+</details>
+
+---
+
+### 2. Root Detection
+
+This is purely for Frida practice. Make the code believe that you device is not rooted!
+
+<details>
+<summary>Show me the solution!</summary>
+<br>
+# TODO
+<br><br>
+</details>
+
+---
 
 ### Disclaimer
 
