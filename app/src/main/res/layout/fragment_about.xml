@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/primaryColor"
+            app:cardBackgroundColor="@color/lighterColor"
             app:cardCornerRadius="4dp"
             app:contentPadding="5dp">
 
@@ -57,7 +57,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Version: 1.0"
-                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:textStyle="italic" />
 
                     </LinearLayout>
 
@@ -71,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/primaryColor"
+            app:cardBackgroundColor="@color/lighterColor"
             app:cardCornerRadius="4dp"
             app:contentPadding="10dp">
 
@@ -140,7 +141,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="https://www.github.com/t0thkr1s"
-                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:textStyle="italic" />
 
                     </LinearLayout>
 
@@ -181,7 +183,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="https://www.twitter.com/t0thkr1s"
-                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:textStyle="italic" />
 
                     </LinearLayout>
 
@@ -195,7 +198,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/primaryColor"
+            app:cardBackgroundColor="@color/lighterColor"
             app:cardCornerRadius="4dp"
             app:contentPadding="10dp">
 
