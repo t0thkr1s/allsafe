@@ -36,6 +36,12 @@
         tools:layout="@layout/fragment_pin_bypass" />
 
     <fragment
+        android:id="@+id/nav_deep_link_exploitation"
+        android:name="infosecadventures.allsafe.challenges.DeepLink"
+        android:label="Deep Link Exploitation"
+        tools:layout="@layout/fragment_deep_link" />
+
+    <fragment
         android:id="@+id/nav_root_detection"
         android:name="infosecadventures.allsafe.challenges.RootDetection"
         android:label="Root Detection"

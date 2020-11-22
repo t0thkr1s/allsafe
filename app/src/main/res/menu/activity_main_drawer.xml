@@ -30,6 +30,10 @@
                     android:icon="@drawable/ic_root_detection"
                     android:title="Root Detection" />
                 <item
+                    android:id="@+id/nav_deep_link_exploitation"
+                    android:icon="@drawable/ic_deep_link"
+                    android:title="Deep Link Exploitation" />
+                <item
                     android:id="@+id/nav_vulnerable_web_view"
                     android:icon="@drawable/ic_webview"
                     android:title="Vulnerable WebView" />
