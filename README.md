@@ -17,7 +17,7 @@ Simple information disclosure vulnerability. Use the `logcat` command-line tool 
 - [Coinbase OAuth Response Code Leak](https://hackerone.com/reports/5314)
 
 <details>
-<summary>Show me the solution!</summary>
+<summary>Show me how it's done!</summary>
 <br>
 # TODO
 <br><br>
@@ -25,12 +25,31 @@ Simple information disclosure vulnerability. Use the `logcat` command-line tool 
 
 ---
 
-### 2. Root Detection
+### 2. Hardcoded Credentials
+
+Some credentials are left in the code. Your task is to reverse engineer the app and find sensitive information.
+
+###### Resources & HackerOne Reports:
+
+- [Zomato Hardcoded Credentials](https://hackerone.com/reports/246995)
+- [8x8 Hardcoded Credentials](https://hackerone.com/reports/412772)
+- [Reverb Hardcoded API Secret](https://hackerone.com/reports/351555)
+
+<details>
+<summary>Show me how it's done!</summary>
+<br>
+# TODO
+<br><br>
+</details>
+
+---
+
+### 3. Root Detection
 
 This is purely for Frida practice. Make the code believe that you device is not rooted!
 
 <details>
-<summary>Show me the solution!</summary>
+<summary>Show me how it's done!</summary>
 <br>
 # TODO
 <br><br>
