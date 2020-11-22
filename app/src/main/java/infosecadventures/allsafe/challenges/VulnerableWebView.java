@@ -36,7 +36,7 @@ public class VulnerableWebView extends Fragment {
         settings.setLoadWithOverviewMode(true);
         settings.setSupportZoom(true);
         view.findViewById(R.id.execute).setOnClickListener(v -> {
-            if (Objects.requireNonNull(payload.getText()).toString().isEmpty()) {
+            if (!Objects.requireNonNull(payload.getText()).toString().isEmpty()) {
                 if (URLUtil.isValidUrl(Objects.requireNonNull(payload.getText()).toString())) {
                     webView.loadUrl(payload.getText().toString());
                 } else {
