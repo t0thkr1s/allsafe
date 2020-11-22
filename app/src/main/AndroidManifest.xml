@@ -19,9 +19,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Allsafe"
         tools:ignore="HardcodedDebugMode">
+        <activity
+            android:name=".challenges.DeepLinkTask"
+            android:theme="@style/Theme.Allsafe.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="infosecadventures"
+                    android:pathPrefix="/congrats"
+                    android:scheme="allsafe" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+            </intent-filter>
+
+        </activity>
+
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -29,7 +57,6 @@
         <receiver
             android:name=".challenges.SecretReceiver"
             android:exported="true" />
-
     </application>
 
 </manifest>
