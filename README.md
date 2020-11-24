@@ -51,7 +51,7 @@ This is purely for Frida practice. Make the code believe that you device is not 
 <details>
 <summary>Show me how it's done!</summary>
 <br>
-# TODO
+https://youtu.be/Gg-3Sw79gEI
 <br><br>
 </details>
 
