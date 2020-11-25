@@ -57,6 +57,23 @@ https://youtu.be/Gg-3Sw79gEI
 
 ---
 
+### 4. Arbitrary Code Execution
+
+Loading modules securely with third-party apps are not easy. Write a PoC application and exploit the vulnerability!
+
+###### Resources & HackerOne Reports:
+
+- [Arbitrary Code Execution via Third-Party Package Contexts](https://blog.oversecured.com/Android-arbitrary-code-execution-via-third-party-package-contexts/)
+
+<details>
+<summary>Show me how it's done!</summary>
+<br>
+# TODO
+<br><br>
+</details>
+
+---
+
 ### Disclaimer
 
 > This tool is only for testing and academic purposes and can only be used where strict consent has been given. Do not use it for illegal purposes! It is the end user’s responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this tool and software.
