@@ -78,6 +78,23 @@ Loading modules securely with third-party apps are not easy. Write a PoC applica
 
 ---
 
+### 5. Secure Flag Bypass
+
+Another Frida-based task. No real vulnerability here, just have fun bypassing the secure flag!
+
+###### Resources & HackerOne Reports:
+
+- [Android FLAG_SECURE Reference](https://developer.android.com/reference/android/view/WindowManager.LayoutParams#FLAG_SECURE)
+
+<details>
+<summary>Show me how it's done!</summary>
+<br>
+# TODO
+<br><br>
+</details>
+
+---
+
 ### Contribute
 
 Noticed a bug? Have a suggestion? Feel free to open an issue or create a pull request!
