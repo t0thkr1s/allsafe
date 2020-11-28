@@ -3,7 +3,11 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-for-android.svg)](https://github.com/t0thkr1s/)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/t0thkr1s/)
 
-Allsafe is an intentionally vulnerable application that contains various vulnerabilities. Additionally, there are some Frida based challenges for you to explore.
+Allsafe is an intentionally vulnerable application that contains various vulnerabilities. Unlike other vulnerable Android apps, this one is less like a CTF and more like a real-life application that uses modern libraries and technologies making it more relevant. Additionally, I have included some Frida based challenges for you to explore. Have fun and happy hacking!
+
+#### Useful Frida Scripts
+ 
+I have my Frida scripts (more like templates) in other repository. I'm sure they might be quite handy for the Frida related tasks. Check it out: https://github.com/t0thkr1s/frida
 
 ## Tasks / Vulnerabilities
 
@@ -73,6 +77,20 @@ Loading modules securely with third-party apps are not easy. Write a PoC applica
 </details>
 
 ---
+
+### Contribute
+
+Noticed a bug? Have a suggestion? Feel free to open an issue or create a pull request!
+
+### Support
+
+If this project was valuable to you or helped you in any way, please consider making a small amount of donation via the following cryptocurrencies. Giving a star on the project also helps a lot. Thanks!
+
+**Bitcoin Address**
+⟹ *bc1qd44kvj6zatjgn27n45uxd3nprzt6rm9x9g2yc8*
+
+**Ethereum Address**
+⟹ *0x1835a58E866a668C48Ee63d32432C7Fe28aF54b4*
 
 ### Disclaimer
 
