@@ -113,6 +113,44 @@ Certificate pinning is implemented using the OkHttp library. You have to bypass 
 
 ---
 
+### 7. Insecure Broadcast Receiver
+
+There's a vulnerable broadcast recevier in the application. Trigger it with the correct data and you're done!
+
+###### Resources & HackerOne Reports:
+
+- [Android Broadcasts Overview](https://developer.android.com/guide/components/broadcasts)
+- [ok.ru Broadcast Receiver Exploitation](https://hackerone.com/reports/97295)
+- [Bitwarden Vulnerable Broadcast Receiver](https://hackerone.com/reports/289000)
+
+<details>
+<summary>Show me how it's done!</summary>
+<br>
+# TODO
+<br><br>
+</details>
+
+---
+
+### 8. Deep Link Exploitation
+
+ Similar to the insecure broadcast receiver, you need to provide the right query parameter to complete this task!
+
+###### Resources & HackerOne Reports:
+
+- [Android Deep Linking](https://developer.android.com/training/app-links/deep-linking)
+- [Grab Insecure Deep Link](https://hackerone.com/reports/401793)
+- [Periscope Deep Link CSRF](https://hackerone.com/reports/583987)
+
+<details>
+<summary>Show me how it's done!</summary>
+<br>
+# TODO
+<br><br>
+</details>
+
+---
+
 ### Contribute
 
 Noticed a bug? Have a suggestion? Feel free to open an issue or create a pull request!
