@@ -3,7 +3,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-for-android.svg)](https://github.com/t0thkr1s/)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/t0thkr1s/)
 
-Allsafe is an intentionally vulnerable application that contains various vulnerabilities. Unlike other vulnerable Android apps, this one is less like a CTF and more like a real-life application that uses modern libraries and technologies making it more relevant. Additionally, I have included some Frida based challenges for you to explore. Have fun and happy hacking!
+Allsafe is an intentionally vulnerable application that contains various vulnerabilities. Unlike other vulnerable Android apps, this one is less like a CTF and more like a real-life application that uses modern libraries and technologies. Additionally, I have included some Frida based challenges for you to explore. Have fun and happy hacking!
 
 #### Useful Frida Scripts
  
@@ -85,6 +85,24 @@ Another Frida-based task. No real vulnerability here, just have fun bypassing th
 ###### Resources & HackerOne Reports:
 
 - [Android FLAG_SECURE Reference](https://developer.android.com/reference/android/view/WindowManager.LayoutParams#FLAG_SECURE)
+
+<details>
+<summary>Show me how it's done!</summary>
+<br>
+# TODO
+<br><br>
+</details>
+
+---
+
+### 6. Certificate Pinning Bypass
+
+Certificate pinning is implemented using the OkHttp library. You have to bypass it in order to view the traffic with Burp Suite.
+
+###### Resources & HackerOne Reports:
+
+- [Certificate and Public Key Pinning](https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning)
+- [Coinbase Vulnerabilities](https://hackerone.com/reports/5786)
 
 <details>
 <summary>Show me how it's done!</summary>
