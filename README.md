@@ -1,5 +1,5 @@
 
- <img align="left" width="120" height="120" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" alt="Resume application project app icon">
+ <img align="left" width="132" height="132" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png">
 
 # Allsafe
 
