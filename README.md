@@ -1,3 +1,6 @@
+
+ <img align="left" width="120" height="120" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" alt="Resume application project app icon">
+
 # Allsafe
 
 [![forthebadge](https://forthebadge.com/images/badges/built-for-android.svg)](https://github.com/t0thkr1s/)
