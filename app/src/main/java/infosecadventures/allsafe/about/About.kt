@@ -19,8 +19,9 @@ class About : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_about, container, false)
         view.version.text = "Version: ${BuildConfig.VERSION_NAME}"
-        view.github.setOnClickListener { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.GITHUB_URI))) }
-        view.twitter.setOnClickListener { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.TWITTER_URI))) }
+        view.blog.setOnClickListener { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MEDIUM))) }
+        view.github.setOnClickListener { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.GITHUB))) }
+        view.twitter.setOnClickListener { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.TWITTER))) }
         view.bitcoin.setOnClickListener {
             ClipUtil.copyToClipboard(requireActivity(), Constants.BTC_ADDRESS)
             SnackUtil.simpleMessage(requireActivity(), "Bitcoin address copied to clipboard!")
