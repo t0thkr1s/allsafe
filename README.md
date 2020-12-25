@@ -171,13 +171,48 @@ Just a regular SQL injection that you'd find in web applications. No need to rev
 
 ---
 
-### 10. Smali Patching
+### 10. Vulnerable WebView
+
+You can also complete this task without decompiling the application. Pop an alert dialog and read files!
+
+###### Resources & HackerOne Reports:
+
+- [ownCloud WebView XSS](https://hackerone.com/reports/87835)
+
+<details>
+<summary>Show me how it's done!</summary>
+<br>
+# TODO
+<br><br>
+</details>
+
+---
+
+### 11. Smali Patching
 
 In this task, you have to modify the execution flow of the application by editing the Smali code. Finally, rebuild and sign the APK!
 
 ###### Resources & HackerOne Reports:
 
 - [Uber APK Signer](https://github.com/patrickfav/uber-apk-signer)
+
+<details>
+<summary>Show me how it's done!</summary>
+<br>
+# TODO
+<br><br>
+</details>
+
+---
+
+### 12. Native Library
+
+The application uses a native library that validates the entered password. Reverse engineer the library to find the password then use Frida to hook the native method.
+
+###### Resources & HackerOne Reports:
+
+- [Ghidra](https://github.com/NationalSecurityAgency/ghidra)
+- [Cutter](https://github.com/rizinorg/cutter)
 
 <details>
 <summary>Show me how it's done!</summary>
