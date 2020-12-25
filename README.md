@@ -137,13 +137,47 @@ There's a vulnerable broadcast recevier in the application. Trigger it with the 
 
 ### 8. Deep Link Exploitation
 
- Similar to the insecure broadcast receiver, you need to provide the right query parameter to complete this task!
+Similar to the insecure broadcast receiver, you need to provide the right query parameter to complete this task!
 
 ###### Resources & HackerOne Reports:
 
 - [Android Deep Linking](https://developer.android.com/training/app-links/deep-linking)
 - [Grab Insecure Deep Link](https://hackerone.com/reports/401793)
 - [Periscope Deep Link CSRF](https://hackerone.com/reports/583987)
+
+<details>
+<summary>Show me how it's done!</summary>
+<br>
+# TODO
+<br><br>
+</details>
+
+---
+
+### 9. SQL Injection
+
+Just a regular SQL injection that you'd find in web applications. No need to reverse the code to bypass the login mechanism.
+
+###### Resources & HackerOne Reports:
+
+- [SQL Injection in Content Provider](https://hackerone.com/reports/291764)
+
+<details>
+<summary>Show me how it's done!</summary>
+<br>
+# TODO
+<br><br>
+</details>
+
+---
+
+### 10. Smali Patching
+
+In this task, you have to modify the execution flow of the application by editing the Smali code. Finally, rebuild and sign the APK!
+
+###### Resources & HackerOne Reports:
+
+- [Uber APK Signer](https://github.com/patrickfav/uber-apk-signer)
 
 <details>
 <summary>Show me how it's done!</summary>
