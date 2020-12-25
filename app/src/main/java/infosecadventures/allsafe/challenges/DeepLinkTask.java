@@ -25,7 +25,7 @@ public class DeepLinkTask extends AppCompatActivity {
         Log.d("ALLSAFE", "Action: " + action + " Data: " + data);
 
         try {
-            if (data.getQueryParameter("key").equals("ebfb7ff0-b2f6-41c8-bef3-4fba17be410c")) {
+            if (data.getQueryParameter("key").equals(getString(R.string.key))) {
                 findViewById(R.id.container).setVisibility(View.VISIBLE);
                 SnackUtil.INSTANCE.simpleMessage(this, "Good job, you did it!");
             } else {

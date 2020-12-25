@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Allsafe</string>
     <string name="dev_env">https://admin:password123@dev.infosecadventures.com</string>
+    <string name="key">ebfb7ff0-b2f6-41c8-bef3-4fba17be410c</string>
 </resources>
