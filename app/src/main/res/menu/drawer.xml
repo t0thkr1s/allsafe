@@ -22,6 +22,10 @@
                     android:icon="@drawable/ic_creds"
                     android:title="Hardcoded Credentials" />
                 <item
+                    android:id="@+id/nav_sql_injection"
+                    android:icon="@drawable/ic_injection"
+                    android:title="SQL Injection" />
+                <item
                     android:id="@+id/nav_pin_bypass"
                     android:icon="@drawable/ic_pin_bypass"
                     android:title="PIN Bypass" />
@@ -53,6 +57,10 @@
                     android:id="@+id/nav_native_library"
                     android:icon="@drawable/ic_native_library"
                     android:title="Native Library" />
+                <item
+                    android:id="@+id/nav_smali_patch"
+                    android:icon="@drawable/ic_smali"
+                    android:title="Smali Patch" />
             </group>
         </menu>
     </item>

@@ -3,7 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_insecure_logging">
+    app:startDestination="@+id/nav_main">
+
+    <fragment
+        android:id="@+id/nav_main"
+        android:name="infosecadventures.allsafe.MainFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main" />
 
     <fragment
         android:id="@+id/nav_search"
@@ -22,6 +28,12 @@
         android:name="infosecadventures.allsafe.challenges.HardcodedCredentials"
         android:label="Hardcoded Credentials"
         tools:layout="@layout/fragment_hardcoded_credentials" />
+
+    <fragment
+        android:id="@+id/nav_sql_injection"
+        android:name="infosecadventures.allsafe.challenges.SQLInjection"
+        android:label="SQL Injection"
+        tools:layout="@layout/fragment_sql_injection" />
 
     <fragment
         android:id="@+id/nav_vulnerable_web_view"
@@ -64,6 +76,12 @@
         android:name="infosecadventures.allsafe.challenges.WeakCrypto"
         android:label="Weak Crypto"
         tools:layout="@layout/fragment_weak_crypto" />
+
+    <fragment
+        android:id="@+id/nav_smali_patch"
+        android:name="infosecadventures.allsafe.challenges.SmaliPatch"
+        android:label="Smali Patch"
+        tools:layout="@layout/fragment_smali_patch" />
 
     <fragment
         android:id="@+id/nav_native_library"
