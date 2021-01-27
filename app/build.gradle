@@ -6,7 +6,7 @@ plugins {
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "infosecadventures.allsafe"
@@ -35,7 +35,7 @@ android {
     }
 
     ndkVersion = '21.3.6528147'
-    buildToolsVersion = '30.0.2'
+    buildToolsVersion = '30.0.3'
 }
 
 dependencies {
