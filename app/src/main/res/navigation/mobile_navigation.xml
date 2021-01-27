@@ -78,6 +78,12 @@
         tools:layout="@layout/fragment_weak_crypto" />
 
     <fragment
+        android:id="@+id/nav_permission_redelegation"
+        android:name="infosecadventures.allsafe.challenges.PermissionReDelegation"
+        android:label="Permission Re-Delegation"
+        tools:layout="@layout/fragment_permission_re_delegation" />
+
+    <fragment
         android:id="@+id/nav_smali_patch"
         android:name="infosecadventures.allsafe.challenges.SmaliPatch"
         android:label="Smali Patch"

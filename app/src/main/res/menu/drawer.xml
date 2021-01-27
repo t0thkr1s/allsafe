@@ -54,6 +54,10 @@
                     android:icon="@drawable/ic_encryption_key"
                     android:title="Weak Crypto" />
                 <item
+                    android:id="@+id/nav_permission_redelegation"
+                    android:icon="@drawable/ic_phone"
+                    android:title="Permission Re-Delegation" />
+                <item
                     android:id="@+id/nav_native_library"
                     android:icon="@drawable/ic_native_library"
                     android:title="Native Library" />

@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_root_detection,
                 R.id.nav_secure_flag_bypass,
                 R.id.nav_vulnerable_web_view,
+                R.id.nav_permission_redelegation,
                 R.id.nav_smali_patch,
                 R.id.nav_native_library,
                 R.id.nav_about)
