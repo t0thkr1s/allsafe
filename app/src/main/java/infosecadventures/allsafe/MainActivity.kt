@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_search,
                 R.id.nav_insecure_logging,
                 R.id.nav_hardcoded_credentials,
+                R.id.nav_firebase_database,
                 R.id.nav_sql_injection,
                 R.id.nav_deep_link_exploitation,
                 R.id.nav_weak_crypto,

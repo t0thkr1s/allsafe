@@ -22,6 +22,10 @@
                     android:icon="@drawable/ic_creds"
                     android:title="Hardcoded Credentials" />
                 <item
+                    android:id="@+id/nav_firebase_database"
+                    android:icon="@drawable/ic_firebase"
+                    android:title="Firebase Database" />
+                <item
                     android:id="@+id/nav_sql_injection"
                     android:icon="@drawable/ic_injection"
                     android:title="SQL Injection" />
@@ -52,7 +56,7 @@
                 <item
                     android:id="@+id/nav_weak_crypto"
                     android:icon="@drawable/ic_encryption_key"
-                    android:title="Weak Crypto" />
+                    android:title="Weak Cryptography" />
                 <item
                     android:id="@+id/nav_permission_redelegation"
                     android:icon="@drawable/ic_phone"
