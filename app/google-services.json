@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "983632160629",
+    "firebase_url": "https://allsafe-8cef0.firebaseio.com",
+    "project_id": "allsafe-8cef0",
+    "storage_bucket": "allsafe-8cef0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983632160629:android:d1d9132ddd988e7127553c",
+        "android_client_info": {
+          "package_name": "infosecadventures.allsafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983632160629-4euaeuiqobk9pjufgq0nsl39kt1204pg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjteCQ0-ElkfBxVZIZmBfCSPNEYUYcK1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983632160629-4euaeuiqobk9pjufgq0nsl39kt1204pg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
