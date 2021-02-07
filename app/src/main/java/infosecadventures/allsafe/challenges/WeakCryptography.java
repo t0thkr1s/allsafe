@@ -21,7 +21,7 @@ import javax.crypto.spec.SecretKeySpec;
 import infosecadventures.allsafe.R;
 import infosecadventures.allsafe.utils.SnackUtil;
 
-public class WeakCrypto extends Fragment {
+public class WeakCryptography extends Fragment {
 
     public static final String KEY = "1nf053c4dv3n7ur3";
 
