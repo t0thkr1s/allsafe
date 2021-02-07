@@ -1,7 +1,13 @@
 package infosecadventures.allsafe
 
 import android.app.Application
+import android.os.Build
+import android.os.Environment
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
+import dalvik.system.DexClassLoader
+import java.io.File
+
 
 class ArbitraryCodeExecution : Application() {
 
@@ -9,6 +15,7 @@ class ArbitraryCodeExecution : Application() {
         super.onCreate()
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         invokePlugins()
+        invokeUpdate()
     }
 
     private fun invokePlugins() {
@@ -25,6 +32,22 @@ class ArbitraryCodeExecution : Application() {
                 } catch (ignored: Exception) {
                 }
             }
+        }
+    }
+
+    private fun invokeUpdate() {
+        try {
+            val file = File(Environment.DIRECTORY_DOWNLOADS + "/allsafe_updater.apk")
+            if (file.exists() && file.isFile) {
+                val dexClassLoader = DexClassLoader(file.absolutePath, cacheDir.absolutePath, null, classLoader)
+                val version = dexClassLoader.loadClass("infosecadventures.allsafe.updater.VersionCheck")
+                        .getDeclaredMethod("getLatestVersion")
+                        .invoke(null) as Int
+                if (Build.VERSION.SDK_INT < version) {
+                    Toast.makeText(this, "Update required!", Toast.LENGTH_LONG).show()
+                }
+            }
+        } catch (ignored: Exception) {
         }
     }
 }
