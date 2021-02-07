@@ -35,8 +35,8 @@ public class CertificatePinning extends Fragment {
         test.setOnClickListener(v -> {
             CertificatePinner certificatePinner = new CertificatePinner.Builder()
                     .add("httpbin.org",
-                            "sha256/flUN9mYPmbQZ0jCTHMo2iEhYuYQrJ3iKdeRV7x+8s50=")
-                    .add("example.com",
+                            "sha256/J0dKy1gw45muM4o/vm/tskFQ2BWudtp9XLxaW7OtowQ=")
+                    .add("httpbin.org",
                             "sha256/JSMzqOOrtyOT1kmau6zKhgT676hGgczD5VMdRMyJZFA=")
                     .build();
 
@@ -59,7 +59,7 @@ public class CertificatePinning extends Fragment {
                     Log.d("ALLSAFE", Objects.requireNonNull(response.body()).string());
                     requireActivity().runOnUiThread(() -> {
                         if (response.isSuccessful()) {
-                            SnackUtil.INSTANCE.simpleMessage(requireActivity(), "Successful connection, check your proxy!");
+                            SnackUtil.INSTANCE.simpleMessage(requireActivity(), "Successful connection over HTTPS!");
                         }
                     });
                 }
