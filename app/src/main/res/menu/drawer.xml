@@ -3,13 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_search"
-            android:icon="@drawable/ic_search"
-            android:title="Search" />
-    </group>
-
     <item android:title="Challenges">
         <menu>
             <group android:checkableBehavior="single">
@@ -25,6 +18,10 @@
                     android:id="@+id/nav_firebase_database"
                     android:icon="@drawable/ic_firebase"
                     android:title="Firebase Database" />
+                <item
+                    android:id="@+id/nav_insecure_shared_preferences"
+                    android:icon="@drawable/ic_shared_preferences"
+                    android:title="Insecure Shared Preferences" />
                 <item
                     android:id="@+id/nav_sql_injection"
                     android:icon="@drawable/ic_injection"
@@ -45,6 +42,12 @@
                     android:id="@+id/nav_deep_link_exploitation"
                     android:icon="@drawable/ic_deep_link"
                     android:title="Deep Link Exploitation" />
+
+                <item
+                    android:id="@+id/nav_insecure_broadcast_receiver"
+                    android:icon="@drawable/ic_broadcast"
+                    android:title="Insecure Broadcast Receiver" />
+
                 <item
                     android:id="@+id/nav_vulnerable_web_view"
                     android:icon="@drawable/ic_webview"
@@ -61,6 +64,10 @@
                     android:id="@+id/nav_permission_redelegation"
                     android:icon="@drawable/ic_phone"
                     android:title="Permission Re-Delegation" />
+                <item
+                    android:id="@+id/nav_arbitrary_code_execution"
+                    android:icon="@drawable/ic_extension"
+                    android:title="Arbitrary Code Execution" />
                 <item
                     android:id="@+id/nav_native_library"
                     android:icon="@drawable/ic_native_library"

@@ -12,12 +12,6 @@
         tools:layout="@layout/fragment_main" />
 
     <fragment
-        android:id="@+id/nav_search"
-        android:name="infosecadventures.allsafe.SearchFragment"
-        android:label="Search"
-        tools:layout="@layout/fragment_search" />
-
-    <fragment
         android:id="@+id/nav_insecure_logging"
         android:name="infosecadventures.allsafe.challenges.InsecureLogging"
         android:label="Insecure Logging"
@@ -34,6 +28,12 @@
         android:name="infosecadventures.allsafe.challenges.FirebaseDatabase"
         android:label="Firebase Database"
         tools:layout="@layout/fragment_firebase_database" />
+
+    <fragment
+        android:id="@+id/nav_insecure_shared_preferences"
+        android:name="infosecadventures.allsafe.challenges.InsecureSharedPreferences"
+        android:label="Insecure Shared Preferences"
+        tools:layout="@layout/fragment_insecure_shared_preferences" />
 
     <fragment
         android:id="@+id/nav_sql_injection"
@@ -66,6 +66,12 @@
         tools:layout="@layout/fragment_deep_link" />
 
     <fragment
+        android:id="@+id/nav_insecure_broadcast_receiver"
+        android:name="infosecadventures.allsafe.challenges.InsecureBroadcastReceiver"
+        android:label="Insecure Broadcast Receiver"
+        tools:layout="@layout/fragment_insecure_broadcast_receiver" />
+
+    <fragment
         android:id="@+id/nav_root_detection"
         android:name="infosecadventures.allsafe.challenges.RootDetection"
         android:label="Root Detection"
@@ -79,7 +85,7 @@
 
     <fragment
         android:id="@+id/nav_weak_crypto"
-        android:name="infosecadventures.allsafe.challenges.WeakCrypto"
+        android:name="infosecadventures.allsafe.challenges.WeakCryptography"
         android:label="Weak Crypto"
         tools:layout="@layout/fragment_weak_crypto" />
 
@@ -88,6 +94,12 @@
         android:name="infosecadventures.allsafe.challenges.PermissionReDelegation"
         android:label="Permission Re-Delegation"
         tools:layout="@layout/fragment_permission_re_delegation" />
+
+    <fragment
+        android:id="@+id/nav_arbitrary_code_execution"
+        android:name="infosecadventures.allsafe.challenges.ArbitraryCodeExecution"
+        android:label="Arbitrary Code Execution"
+        tools:layout="@layout/fragment_arbitrary_code_execution" />
 
     <fragment
         android:id="@+id/nav_smali_patch"
