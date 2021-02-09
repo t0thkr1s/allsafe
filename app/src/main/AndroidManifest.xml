@@ -51,8 +51,12 @@
         </activity>
 
         <receiver
-            android:name=".challenges.SecretReceiver"
-            android:exported="true" />
+            android:name=".challenges.NoteReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="infosecadventures.allsafe.action.PROCESS_NOTE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
