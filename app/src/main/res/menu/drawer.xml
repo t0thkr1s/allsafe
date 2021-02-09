@@ -61,10 +61,6 @@
                     android:icon="@drawable/ic_encryption_key"
                     android:title="Weak Cryptography" />
                 <item
-                    android:id="@+id/nav_permission_redelegation"
-                    android:icon="@drawable/ic_phone"
-                    android:title="Permission Re-Delegation" />
-                <item
                     android:id="@+id/nav_arbitrary_code_execution"
                     android:icon="@drawable/ic_extension"
                     android:title="Arbitrary Code Execution" />
