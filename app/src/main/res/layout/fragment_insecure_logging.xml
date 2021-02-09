@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -88,11 +89,13 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
+            android:justificationMode="inter_word"
             android:text="Welcome!\n\nThis challange is intended to be solved without decompiling the application. The goal is get the flag from the logs."
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/difficulty" />
+            app:layout_constraintTop_toBottomOf="@id/difficulty"
+            tools:targetApi="o" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"

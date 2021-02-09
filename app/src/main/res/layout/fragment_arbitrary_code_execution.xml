@@ -99,6 +99,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
+            android:justificationMode="inter_word"
             android:text="There are 2 ways to execute arbirary code in this application and they are located in a single vulnerable class.\n\nThe first option is to launch code from third-party apps with no security checks. The second option is related to DEX libraries. May the code be with you!"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"

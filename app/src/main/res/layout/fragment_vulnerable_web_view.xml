@@ -89,11 +89,13 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
+            android:justificationMode="inter_word"
             android:text="This challange is intended to be solved without decompiling the application. The first task is show an alert dialog. For the second task, you have to access a local file (e.g. /etc/hosts) stored on the device."
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/difficulty" />
+            app:layout_constraintTop_toBottomOf="@id/difficulty"
+            tools:targetApi="o" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/payloadLayout"
