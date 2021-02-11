@@ -46,7 +46,7 @@ public class WeakCryptography extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_weak_crypto, container, false);
+        View view = inflater.inflate(R.layout.fragment_weak_cryptography, container, false);
         final EditText secret = view.findViewById(R.id.secret);
         view.findViewById(R.id.encrypt).setOnClickListener(v -> {
             String plain_text = secret.getText().toString();
