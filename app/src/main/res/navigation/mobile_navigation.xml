@@ -87,7 +87,7 @@
         android:id="@+id/nav_weak_crypto"
         android:name="infosecadventures.allsafe.challenges.WeakCryptography"
         android:label="Weak Crypto"
-        tools:layout="@layout/fragment_weak_crypto" />
+        tools:layout="@layout/fragment_weak_cryptography" />
 
     <fragment
         android:id="@+id/nav_arbitrary_code_execution"
