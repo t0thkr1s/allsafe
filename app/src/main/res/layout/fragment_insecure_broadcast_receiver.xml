@@ -143,7 +143,7 @@
                 android:gravity="center"
                 android:hint="Enter note here..."
                 android:imeOptions="actionDone"
-                android:maxLines="1"
+                android:singleLine="true"
                 android:textColorHighlight="@color/secondaryLightColor"
                 android:textColorHint="@color/secondaryLightColor"
                 android:textSize="18sp" />
