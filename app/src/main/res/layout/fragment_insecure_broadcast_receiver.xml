@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -37,6 +38,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:text="Explicit"
+                android:textColor="@color/primaryColor"
+                app:chipBackgroundColor="@color/secondaryLightColor" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:text="Broadcast"
                 android:textColor="@color/primaryColor"
                 app:chipBackgroundColor="@color/secondaryLightColor" />
@@ -54,6 +63,30 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Exported"
+                android:textColor="@color/primaryColor"
+                app:chipBackgroundColor="@color/secondaryLightColor" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Permission"
+                android:textColor="@color/primaryColor"
+                app:chipBackgroundColor="@color/secondaryLightColor" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Re-delegation"
+                android:textColor="@color/primaryColor"
+                app:chipBackgroundColor="@color/secondaryLightColor" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="PoC"
                 android:textColor="@color/primaryColor"
                 app:chipBackgroundColor="@color/secondaryLightColor" />
 
@@ -80,27 +113,58 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="You need to find the exported broadcast receiver and trigger it with the correct paramater. The application logic is simple and the provided parameter value will be your flag. Time to hunt!"
+            android:justificationMode="inter_word"
+            android:text="Our intern wrote a simple note taking feature into the app but the data processing logic seems weird. Gideon got some reports about critical vulnerabilities being exploited... As far as I know, hackers were able to capture the notes and exploit a permission re-delegation vulnerability. Can you check this madness out and maybe write a PoC for demonstration?"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/difficulty" />
+            app:layout_constraintTop_toBottomOf="@id/difficulty"
+            tools:targetApi="o" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/noteLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:boxStrokeColor="@color/secondaryLightColor"
+            app:hintTextColor="@color/secondaryLightColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="Enter note here..."
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:textColorHighlight="@color/secondaryLightColor"
+                android:textColorHint="@color/secondaryLightColor"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/broadcast"
+            android:id="@+id/save"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="Send Broadcast"
+            android:text="Save Note"
             android:textColor="@color/secondaryLightColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/description"
+            app:layout_constraintTop_toBottomOf="@+id/noteLayout"
             app:strokeColor="@color/secondaryLightColor">
 
         </com.google.android.material.button.MaterialButton>
