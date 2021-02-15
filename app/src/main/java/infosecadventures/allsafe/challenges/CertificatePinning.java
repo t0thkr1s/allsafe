@@ -51,7 +51,7 @@ public class CertificatePinning extends Fragment {
             okHttpClient.newCall(request).enqueue(new Callback() {
                 @Override
                 public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                    requireActivity().runOnUiThread(() -> SnackUtil.INSTANCE.simpleMessage(requireActivity(), "The client failed to negotiate a TLS connection!"));
+                    requireActivity().runOnUiThread(() -> SnackUtil.INSTANCE.simpleMessage(requireActivity(), e.getMessage()));
                 }
 
                 @Override
