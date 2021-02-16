@@ -57,9 +57,13 @@
                     android:icon="@drawable/ic_cert"
                     android:title="Certificate Pinning" />
                 <item
-                    android:id="@+id/nav_weak_crypto"
+                    android:id="@+id/nav_weak_cryptography"
                     android:icon="@drawable/ic_encryption_key"
                     android:title="Weak Cryptography" />
+                <item
+                    android:id="@+id/nav_object_serialization"
+                    android:icon="@drawable/ic_serialization"
+                    android:title="Object Serialization" />
                 <item
                     android:id="@+id/nav_arbitrary_code_execution"
                     android:icon="@drawable/ic_extension"
