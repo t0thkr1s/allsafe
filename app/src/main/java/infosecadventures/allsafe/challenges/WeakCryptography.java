@@ -1,6 +1,7 @@
 package infosecadventures.allsafe.challenges;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,9 +9,12 @@ import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
 
+import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
+import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Random;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -43,9 +47,29 @@ public class WeakCryptography extends Fragment {
         return null;
     }
 
+    public static String md5Hash(String text) {
+        String hashedOutput = "";
+        MessageDigest digest;
+        try {
+            digest = MessageDigest.getInstance("MD5");
+            digest.update(text.getBytes());
+            byte[] messageDigest = digest.digest();
+
+            hashedOutput = String.format("%032X", new BigInteger(1, messageDigest));
+        } catch (Exception e) {
+            Log.d("ALLSAFE", e.getLocalizedMessage());
+        }
+        return hashedOutput;
+    }
+
+    public static String randomNumber() {
+        Random rnd = new Random();
+        int n = rnd.nextInt(100000) + 1;
+        return Integer.toString(n);
+    }
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_weak_cryptography, container, false);
         final EditText secret = view.findViewById(R.id.secret);
         view.findViewById(R.id.encrypt).setOnClickListener(v -> {
@@ -56,6 +80,16 @@ public class WeakCryptography extends Fragment {
                 SnackUtil.INSTANCE.simpleMessage(requireActivity(), "First, you have to enter your secrets!");
             }
         });
+        view.findViewById(R.id.hash).setOnClickListener(v -> {
+            String plain_text = secret.getText().toString();
+            if (!plain_text.isEmpty()) {
+                SnackUtil.INSTANCE.simpleMessage(requireActivity(), "MD5 Hash: " + md5Hash(plain_text));
+            } else {
+                SnackUtil.INSTANCE.simpleMessage(requireActivity(), "First, you have to enter your secrets!");
+            }
+        });
+
+        view.findViewById(R.id.random).setOnClickListener(v -> SnackUtil.INSTANCE.simpleMessage(requireActivity(), "Random: " + randomNumber()));
         return view;
     }
 }
