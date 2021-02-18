@@ -48,18 +48,16 @@ public class WeakCryptography extends Fragment {
     }
 
     public static String md5Hash(String text) {
-        String hashedOutput = "";
-        MessageDigest digest;
+        StringBuilder stringBuilder = new StringBuilder();
         try {
-            digest = MessageDigest.getInstance("MD5");
+            MessageDigest digest = MessageDigest.getInstance("MD5");
             digest.update(text.getBytes());
             byte[] messageDigest = digest.digest();
-
-            hashedOutput = String.format("%032X", new BigInteger(1, messageDigest));
+            stringBuilder.append(String.format("%032X", new BigInteger(1, messageDigest)));
         } catch (Exception e) {
             Log.d("ALLSAFE", e.getLocalizedMessage());
         }
-        return hashedOutput;
+        return stringBuilder.toString();
     }
 
     public static String randomNumber() {
