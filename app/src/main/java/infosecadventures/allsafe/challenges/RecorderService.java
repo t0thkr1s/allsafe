@@ -20,12 +20,8 @@ import java.util.Objects;
 
 public class RecorderService extends Service implements MediaRecorder.OnInfoListener {
 
-    private final long MAX_FILE_SIZE = 1000000; // 1 MB
-    private final int[] amplitudes = new int[100];
-    private final int i = 0;
     private MediaRecorder mediaRecorder;
     private File outputFile;
-    private long startTime = 0;
 
     @Override
     public void onCreate() {
@@ -61,7 +57,7 @@ public class RecorderService extends Service implements MediaRecorder.OnInfoList
             } catch (Exception e) {
                 Log.d("ALLSAFE", e.getMessage());
             }
-            mediaRecorder.setMaxFileSize(MAX_FILE_SIZE);
+            mediaRecorder.setMaxFileSize(1000000); // 1 MB
             mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
             mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.HE_AAC);
             mediaRecorder.setAudioEncodingBitRate(48000);
@@ -69,16 +65,14 @@ public class RecorderService extends Service implements MediaRecorder.OnInfoList
             outputFile = getOutputFile();
             Objects.requireNonNull(outputFile.getParentFile()).mkdirs();
             mediaRecorder.setOutputFile(outputFile.getAbsolutePath());
-
             try {
                 mediaRecorder.prepare();
                 mediaRecorder.start();
-                startTime = SystemClock.elapsedRealtime();
             } catch (IOException e) {
                 Log.d("ALLSAFE", e.getMessage());
             }
         } catch (Exception e) {
-            Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error! Try a physical device!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -86,7 +80,6 @@ public class RecorderService extends Service implements MediaRecorder.OnInfoList
         mediaRecorder.stop();
         mediaRecorder.release();
         mediaRecorder = null;
-        startTime = 0;
         if (outputFile != null) {
             outputFile.delete();
         }
