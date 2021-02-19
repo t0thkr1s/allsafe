@@ -61,6 +61,10 @@
                     android:icon="@drawable/ic_encryption_key"
                     android:title="Weak Cryptography" />
                 <item
+                    android:id="@+id/nav_insecure_service"
+                    android:icon="@drawable/ic_mic"
+                    android:title="Insecure Service" />
+                <item
                     android:id="@+id/nav_object_serialization"
                     android:icon="@drawable/ic_serialization"
                     android:title="Object Serialization" />

@@ -90,6 +90,12 @@
         tools:layout="@layout/fragment_weak_cryptography" />
 
     <fragment
+        android:id="@+id/nav_insecure_service"
+        android:name="infosecadventures.allsafe.challenges.InsecureService"
+        android:label="Insecure Service"
+        tools:layout="@layout/fragment_insecure_service" />
+
+    <fragment
         android:id="@+id/nav_object_serialization"
         android:name="infosecadventures.allsafe.challenges.ObjectSerialization"
         android:label="Object Serialization"
