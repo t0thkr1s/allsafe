@@ -5,23 +5,17 @@ import android.content.Intent;
 import android.media.MediaRecorder;
 import android.os.Environment;
 import android.os.IBinder;
-import android.os.SystemClock;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-
 import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Objects;
 
 public class RecorderService extends Service implements MediaRecorder.OnInfoListener {
 
     private MediaRecorder mediaRecorder;
-    private File outputFile;
 
     @Override
     public void onCreate() {
@@ -31,16 +25,10 @@ public class RecorderService extends Service implements MediaRecorder.OnInfoList
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
+        startRecording();
         return Service.START_STICKY;
     }
 
-    @Override
-    public void onStart(Intent intent, int startId) {
-        super.onStart(intent, startId);
-        startRecording();
-    }
-
-    @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         return null;
@@ -50,59 +38,50 @@ public class RecorderService extends Service implements MediaRecorder.OnInfoList
         Toast.makeText(this, "Audio recording started!", Toast.LENGTH_SHORT).show();
         try {
             mediaRecorder = new MediaRecorder();
-            mediaRecorder.setOnInfoListener(this);
-            try {
-                mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-                mediaRecorder.setAudioSource(MediaRecorder.AudioSource.DEFAULT);
-            } catch (Exception e) {
-                Log.d("ALLSAFE", e.getMessage());
-            }
-            mediaRecorder.setMaxFileSize(1000000); // 1 MB
+            mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+            mediaRecorder.setMaxDuration(10000);
             mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-            mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.HE_AAC);
-            mediaRecorder.setAudioEncodingBitRate(48000);
+            mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
+            mediaRecorder.setAudioEncodingBitRate(64000);
             mediaRecorder.setAudioSamplingRate(16000);
-            outputFile = getOutputFile();
-            Objects.requireNonNull(outputFile.getParentFile()).mkdirs();
+            File outputFile = getOutputFile();
             mediaRecorder.setOutputFile(outputFile.getAbsolutePath());
-            try {
-                mediaRecorder.prepare();
-                mediaRecorder.start();
-            } catch (IOException e) {
-                Log.d("ALLSAFE", e.getMessage());
-            }
+            mediaRecorder.prepare();
+            mediaRecorder.start();
         } catch (Exception e) {
-            Toast.makeText(this, "Error! Try a physical device!", Toast.LENGTH_SHORT).show();
+            Log.d("ALLSAFE", "Exception: " + e.getMessage());
         }
     }
 
-    protected void stopRecording() {
-        mediaRecorder.stop();
-        mediaRecorder.release();
-        mediaRecorder = null;
-        if (outputFile != null) {
-            outputFile.delete();
+    private void stopRecording() {
+        try {
+            if (null != mediaRecorder) {
+                mediaRecorder.stop();
+                mediaRecorder.reset();
+                mediaRecorder.release();
+                mediaRecorder = null;
+            }
+            stopSelf();
+        } catch (Exception e) {
+            Log.d("ALLSAFE", "Exception: " + e.getMessage());
         }
-        Toast.makeText(this, "Audio recording stopped!", Toast.LENGTH_SHORT).show();
-        stopSelf();
+        Toast.makeText(getApplicationContext(), "Audio recording stopped!", Toast.LENGTH_SHORT).show();
     }
 
     private File getOutputFile() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmssSSS", Locale.US);
-        String fullPath = Environment.getExternalStorageDirectory()
+        String fullPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
                 .getAbsolutePath()
-                + "/recording_"
+                + "/allsafe_rec_"
                 + dateFormat.format(new Date())
-                + ".mp4";
-        Toast.makeText(this, "File: " + fullPath, Toast.LENGTH_SHORT).show();
+                + ".mp3";
+        Toast.makeText(getApplicationContext(), "File: " + fullPath, Toast.LENGTH_SHORT).show();
         return new File(fullPath);
     }
 
     @Override
     public void onInfo(MediaRecorder mr, int what, int extra) {
-        if (what == MediaRecorder.MEDIA_RECORDER_INFO_MAX_FILESIZE_REACHED) {
-            stopRecording();
-        }
+        stopRecording();
     }
 
     @Override
