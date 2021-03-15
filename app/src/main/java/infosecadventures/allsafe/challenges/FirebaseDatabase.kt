@@ -33,7 +33,6 @@ class FirebaseDatabase : Fragment() {
                     SnackUtil.simpleMessage(requireActivity(), "Sorry, database error!")
                 }
             })
-
         }
 
         return view
