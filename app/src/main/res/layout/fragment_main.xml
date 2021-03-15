@@ -27,7 +27,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="serif-monospace"
         android:gravity="center"
-        android:text="Allsafe is an intentionally vulnerable application that contains various vulnerabilities. Unlike other vulnerable Android apps, this one is less like a CTF and more like a real-life application that uses modern libraries and technologies. Additionally, I have included some Frida based challenges for you to explore. Have fun and happy hacking!"
+        android:text="Allsafe is an intentionally vulnerable application that contains various vulnerabilities. Unlike other vulnerable Android apps, this one is more like a real-life application that uses modern libraries and technologies. Additionally, I have included some Frida based challenges for you to explore. Have fun and happy hacking!"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
