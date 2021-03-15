@@ -102,6 +102,12 @@
         tools:layout="@layout/fragment_object_serialization" />
 
     <fragment
+        android:id="@+id/nav_insecure_providers"
+        android:name="infosecadventures.allsafe.challenges.InsecureProviders"
+        android:label="Insecure Providers"
+        tools:layout="@layout/fragment_insecure_providers" />
+
+    <fragment
         android:id="@+id/nav_arbitrary_code_execution"
         android:name="infosecadventures.allsafe.challenges.ArbitraryCodeExecution"
         android:label="Arbitrary Code Execution"

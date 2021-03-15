@@ -69,6 +69,10 @@
                     android:icon="@drawable/ic_serialization"
                     android:title="Object Serialization" />
                 <item
+                    android:id="@+id/nav_insecure_providers"
+                    android:icon="@drawable/ic_provider"
+                    android:title="Insecure Providers" />
+                <item
                     android:id="@+id/nav_arbitrary_code_execution"
                     android:icon="@drawable/ic_extension"
                     android:title="Arbitrary Code Execution" />
