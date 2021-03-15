@@ -24,11 +24,12 @@
         android:theme="@style/Theme.Allsafe"
         tools:ignore="HardcodedDebugMode"
         tools:targetApi="n">
-
+        <activity
+            android:name=".ProxyActivity"
+            android:exported="true" />
         <activity
             android:name=".challenges.DeepLinkTask"
             android:theme="@style/Theme.Allsafe.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -48,12 +49,11 @@
 
                 <data android:scheme="https" />
             </intent-filter>
-
         </activity>
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -72,11 +72,20 @@
             android:exported="true" />
 
         <provider
-            android:name=".challenges.FileProvider"
-            android:authorities="infosecadventures.allsafe.fileprovider"
-            android:exported="true"
-            android:grantUriPermissions="true" />
+            android:name=".challenges.DataProvider"
+            android:authorities="infosecadventures.allsafe.dataprovider"
+            android:enabled="true"
+            android:exported="true" />
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="infosecadventures.allsafe.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
     </application>
 
 </manifest>
