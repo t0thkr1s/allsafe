@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import infosecadventures.allsafe.BuildConfig
@@ -21,14 +21,14 @@ class About : Fragment() {
         val view = inflater.inflate(R.layout.fragment_about, container, false)
         val version = "Version: ${BuildConfig.VERSION_NAME}"
         view.findViewById<TextView>(R.id.version).text = version
-        view.findViewById<Button>(R.id.blog).setOnClickListener { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MEDIUM))) }
-        view.findViewById<Button>(R.id.github).setOnClickListener { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.GITHUB))) }
-        view.findViewById<Button>(R.id.twitter).setOnClickListener { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.TWITTER))) }
-        view.findViewById<Button>(R.id.bitcoin).setOnClickListener {
+        view.findViewById<LinearLayout>(R.id.blog).setOnClickListener { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MEDIUM))) }
+        view.findViewById<LinearLayout>(R.id.github).setOnClickListener { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.GITHUB))) }
+        view.findViewById<LinearLayout>(R.id.twitter).setOnClickListener { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.TWITTER))) }
+        view.findViewById<LinearLayout>(R.id.bitcoin).setOnClickListener {
             ClipUtil.copyToClipboard(requireActivity(), Constants.BTC_ADDRESS)
             SnackUtil.simpleMessage(requireActivity(), "Bitcoin address copied to clipboard!")
         }
-        view.findViewById<Button>(R.id.ethereum).setOnClickListener {
+        view.findViewById<LinearLayout>(R.id.ethereum).setOnClickListener {
             ClipUtil.copyToClipboard(requireActivity(), Constants.ETH_ADDRESS)
             SnackUtil.simpleMessage(requireActivity(), "Ethereum address copied to clipboard!")
         }
