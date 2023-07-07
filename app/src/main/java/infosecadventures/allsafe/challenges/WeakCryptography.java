@@ -29,7 +29,7 @@ public class WeakCryptography extends Fragment {
 
     public static final String KEY = "1nf053c4dv3n7ur3";
 
-    public static String encrypt(String value) {
+    public static String encrypt(String key,String value) {
         try {
             SecretKeySpec secretKeySpec = new SecretKeySpec(KEY.getBytes(StandardCharsets.UTF_8), "AES");
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
@@ -73,7 +73,7 @@ public class WeakCryptography extends Fragment {
         view.findViewById(R.id.encrypt).setOnClickListener(v -> {
             String plain_text = secret.getText().toString();
             if (!plain_text.isEmpty()) {
-                SnackUtil.INSTANCE.simpleMessage(requireActivity(), "Result: " + encrypt(plain_text));
+                SnackUtil.INSTANCE.simpleMessage(requireActivity(), "Result: " + encrypt(KEY,plain_text));
             } else {
                 SnackUtil.INSTANCE.simpleMessage(requireActivity(), "First, you have to enter your secrets!");
             }
