@@ -57,7 +57,7 @@ Some credentials are left in the code. Your task is to reverse engineer the app 
 
 ### 3. Root Detection
 
-This is purely for Frida practice. Make the code believe that you device is not rooted!
+This is purely for Frida practice. Make the code believe that your device is not rooted!
 
 <details>
 <summary>Show me how it's done!</summary>
