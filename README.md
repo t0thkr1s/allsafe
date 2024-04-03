@@ -27,9 +27,9 @@ Simple information disclosure vulnerability. Use the `logcat` command-line tool 
 <summary>Show me how it's done!</summary>
 <br>
 adb shell 'pidof infosecadventures.allsafe'
-<br>
-Take output and substutue for <pid>
-<br>
+<br><br>
+Take output and substitue for <pid>
+<br><br>
 adb shell 'logcat --pid <pid> | grep secret'
 <br><br>
 </details>
