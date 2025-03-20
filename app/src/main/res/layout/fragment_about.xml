@@ -233,7 +233,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/twitter"
+                    android:id="@+id/x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -246,7 +246,7 @@
                         android:layout_height="25dp"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:src="@drawable/ic_twitter" />
+                        android:src="@drawable/ic_x" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -258,7 +258,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Twitter"
+                            android:text="X"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                             android:textColor="@android:color/white" />
 
@@ -266,7 +266,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="https://www.twitter.com/t0thkr1s"
+                            android:text="https://www.x.com/t0thkr1s"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                             android:textStyle="italic" />
 
